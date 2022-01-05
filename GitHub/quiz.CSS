@@ -16,6 +16,10 @@ input[type = radio] {
     cursor: pointer;
     
 }
+body{
+    max-width: 80rem;
+
+}
 
 button{
     background-color: #4CAF4F;
@@ -39,9 +43,10 @@ button:hover,.raise:focus {
 #questionCounter{
     font-size: 22px;
 }
-label {
+p {
     margin-top: 40px;
     font-size: 16px;
+    display: inline;
 }
 
 .show-active{
