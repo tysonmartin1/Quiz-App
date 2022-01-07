@@ -59,14 +59,26 @@ getNewQuestion = () => {
   currentQuestion = availableQuestions[questionIndex]
   question.innerText = currentQuestion.question;
   console.log(question.innerText)
-}
+  
+  choices.forEach( choice => {
+    const number = choice.dataset['number'];
+    console.log(number)
+    choice.innerText = currentQuestion['choice' + number];
+    console.log(choice.innerText)
+    
+  })
+  availableQuestions.splice(questionIndex, 1);
 
-choices.forEach( choice => {
-  const number = choice.dataset['number'];
-  console.log(number)
-  choice.innerText = currentQuestion['choice' + number];
-  console.log(choice.innerText)
-})
+
+  acceptingAnswers = true;
+};
 
 
+/*choices.forEach(choice => {
+  choice.addEventListener("click", e => {
+    if(!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+  })
+})*/
 startgame()
