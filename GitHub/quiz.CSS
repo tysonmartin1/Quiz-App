@@ -1,12 +1,42 @@
-html{
+html, body{
     font-family: Arial, Helvetica, sans-serif;
-    min-width: 776px ;
+   min-width: 100%;
+   min-height: 100%;
+    margin: 0;
 }
+body{
+    margin-left: 10px;
+}
+/* Start Screen Styles */
+#startingScreen{
+    background-color: #F1F1F1;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-top: 12px;
+    border: 1px solid #4CAF4F;
+}
+ #startBtn{
+     width: 100px;
+     height: 50px;
+     font-size: 25px;
+ }
 
+ h2,#startingScreen{
+     font-size: 40px;
+     padding-bottom: -30px;
+ }
+
+/* Main Quiz */
 .answerOptions{
     background-color: #F1F1F1;
-    margin: 4px;
+    margin-bottom: 5px;
+    width: 80rem;
     height: 38px;
+    margin: auto;
+    display: block;
     padding-top: 15px;
     padding-left: 10px;
 }
@@ -15,7 +45,7 @@ input[type = radio] {
     transform: scale(1.5);
     margin-right: 10px;
     cursor: pointer;
-    
+    float: left;
 }
 body{
     max-width: 80rem;
@@ -48,12 +78,4 @@ p {
     margin-top: 40px;
     font-size: 16px;
     display: inline;
-}
-
-.show-active{
-    display: block;
-}
-
-#hide{
-    display: none;
 }
