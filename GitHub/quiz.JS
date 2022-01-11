@@ -54,6 +54,10 @@ startgame = () => {
 }
 
 getNewQuestion = () => {
+  if(availableQuestions.length === 0 || questionCounter > maxQuestions){
+
+    return window.location.assign("/end.hmtml");
+  }
   questionCounter++
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex]
@@ -74,11 +78,28 @@ getNewQuestion = () => {
 };
 
 
-/*choices.forEach(choice => {
+choices.forEach(choice => {
   choice.addEventListener("click", e => {
     if(!acceptingAnswers) return;
 
     acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    let classToApply = "incorrect";
+    if(selectedAnswer == currentQuestion.answer){
+      classToApply = 'correct';
+    }
+   
+    selectedChoice.parentElement.classList.add(classToApply);
+
+    setTimeout( () => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+
+    }, 1000);
+  
+    getNewQuestion();
   })
-})*/
+})
 startgame()
