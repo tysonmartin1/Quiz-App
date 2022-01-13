@@ -32,6 +32,9 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const question = document.getElementById("question")
 const nextBtn = document.getElementById("next-button")
 const backBtn = document.getElementById("back-button")
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
+
 
 let questionNumber = 0;
 
@@ -59,16 +62,19 @@ getNewQuestion = () => {
     return window.location.assign("/end.hmtml");
   }
   questionCounter++
+  questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
+
+
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex]
   question.innerText = currentQuestion.question;
-  console.log(question.innerText)
+ 
   
   choices.forEach( choice => {
     const number = choice.dataset['number'];
-    console.log(number)
+    
     choice.innerText = currentQuestion['choice' + number];
-    console.log(choice.innerText)
+  
     
   })
   availableQuestions.splice(questionIndex, 1);
@@ -84,12 +90,10 @@ choices.forEach(choice => {
 
     acceptingAnswers = false;
     const selectedChoice = e.target;
-    const selectedAnswer = selectedChoice.dataset["number"];
+    let selectedAnswer = selectedChoice.dataset["number"];
 
-    let classToApply = "incorrect";
-    if(selectedAnswer == currentQuestion.answer){
-      classToApply = 'correct';
-    }
+  let classToApply =
+  selectedAnswer = currentQuestion.answer ? "correct" : "incorrect";
    
     selectedChoice.parentElement.classList.add(classToApply);
 
@@ -98,7 +102,7 @@ choices.forEach(choice => {
       getNewQuestion();
 
     }, 1000);
-  
+  console.log(classToApply)
     getNewQuestion();
   })
 })

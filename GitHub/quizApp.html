@@ -8,16 +8,35 @@
         <link rel="stylesheet" href="quiz.CSS">
         </head>
         <body>
-        <div id ="quizName">
-        <h1 style = "font-weight: normal ;" >eCommerce Quiz</h1>
+            <div id = "quiz" class = "mainQuiz">
+        
+            
+            <div id ="quizName">
+                <h1 style = "font-weight: normal ;" >eCommerce Quiz</h1>
+            </div>
+
+
+        <div id = "hud">
+            <div id = "hud-item">
+
+                <p class = "hud-prefix">
+                    Question
+                </p>
+                <h1 class = "hud-main-text" id = "questionCounter">
+                    1/3
+                </h1>
+            </div>
+                
+                <div id = "hud-item">
+                    <p class = "hud-prefix">
+                        Score
+                    </p>
+                    <h1 class = "hud-main-text" id = "score">
+                        0
+                    </h1>
+                </div>
         </div>
 
-        <div id = "questionCounter">
-        Queston  of  :   
-        <!-- Ex. Question 1 of 4:-->
-        </div>
-
-        <div id = "quiz" class = "mainQuiz">
 
 
         <h3 id = "question"></h3>
@@ -47,10 +66,10 @@
             <p class = "choice-text" data-number="4">sdfsd</p><br>
         </div>
 
-        </div>
-
+        
         <button id= "back-button" class="hide">< Back</button>
         <button id= "next-button">Next ></button>
+    </div>
         <script src = "quiz.JS"></script>
         </body>
         </html>
