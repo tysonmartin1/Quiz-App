@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="quiz.CSS">
 </head>
 <body>
-    <div id = "endScreen">
+    <div id = "body-container">
         <h1 id = "end-quiz-text">
             End of Quiz
         </h1>
         <div id = "finalScore">
-            0
+           
         </div>
             <form>
           
@@ -22,18 +22,22 @@
                 type="text"
                 name= "username"
                 placeholder="username"
-                id= "leaderboardName"
+                id=  "username"
                 >
 
             </form>
 
-        <div id = "endBtn">
-            <button type="submit">
+            <div class = "endBtn">
+                <button 
+                type="submit"
+                id = "saveScoreBtn"
+                onclick= "saveHighScore(event)"
+                disabled>
                 Save
             </button>
 
         </div>    
-        <div id= "endBtn">
+        <div>
             <a href = "quizApp.html">
             <button>
                 Play Again!
@@ -42,7 +46,7 @@
 
         </div>
         
-        <div id= "endBtn">
+        <div class = "endBtn">
             <a href = "quizStart.html">
                 <button>
                     Go Home
@@ -51,6 +55,6 @@
 
         </div>
     </div>
-    
+    <script src = "end.JS"></script>
 </body>
 </html>

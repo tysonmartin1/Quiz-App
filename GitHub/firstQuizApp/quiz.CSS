@@ -8,10 +8,10 @@ html, body{
 /* Start Screen Styles */
 
 
-#start-container{
+#body-container{
     background-color: #F1F1F1;
-    width: 300px;
-    height: 30rem;
+    width: 30rem;
+    height: 25rem;
     text-align: center;
     margin: auto;
     display: block;
@@ -25,8 +25,12 @@ html, body{
 
  .startTitle{
      padding-bottom: -100px;
-     font-weight: normal;
+     
  }
+ 
+ .startBtn{
+     display: block;
+    }
 
 /* Main Quiz */
 
@@ -113,18 +117,7 @@ button:hover,.raise:focus {
 }
 /* End Screen Styles */
 
-#endScreen {
-    background-color: #F1F1F1;
-    width: 300px;
-    height: 25rem;
-    text-align: center;
-    margin: auto;
-    display: block;
-    padding-top: 12px;
-    border: 1px solid #4CAF4F;
-    margin-top: 200px;
-    border-radius: 25px;
-}
+
 
 #end-quiz-text{
 
@@ -136,7 +129,7 @@ font-weight: bold;
 padding-bottom: 1rem;
 }
 
-#leaderboardName{
+#username{
 height: 2rem;
 width: 15rem;
 text-align: center;
@@ -146,9 +139,14 @@ border-radius: 25px;
 
 }
 
-#endBtn{
+.endBtn{
     display: block;
-    margin: 1rem;
+    margin: -12.5px;
     
 }
 
+.endBtn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
