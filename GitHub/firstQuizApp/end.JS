@@ -19,7 +19,7 @@ console.log('clicked the save button!')
 e.preventDefault();
 
 const score = {
-    score: Math.floor(Math.random() + 100),
+    score: Math.floor(Math.random() * 100),
     name: username.value
 };
 

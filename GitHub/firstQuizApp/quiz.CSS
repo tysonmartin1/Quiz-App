@@ -141,7 +141,7 @@ border-radius: 25px;
 
 .endBtn{
     display: block;
-    margin: -12.5px;
+    margin: -8px;
     
 }
 
@@ -149,4 +149,14 @@ border-radius: 25px;
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+/* High Scores Screen */
+
+#highScoresList{
+    list-style: none;
+    padding-right: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+
 }
