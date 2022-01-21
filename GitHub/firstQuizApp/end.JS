@@ -27,8 +27,10 @@ highScores.push(score);
 highScores.sort( (a,b) => b.score - a.score)
 highScores.splice(5);
 
+
 localStorage.setItem('highScores' , JSON.stringify(highScores));
 window.location.assign('quizStart.html');
 
-console.log(highScores);
+
+console.log(highScores)
 }
